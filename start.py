@@ -762,20 +762,20 @@ class HttpFlood(Thread):
         self._payload = (self._defaultpayload +
                          'Brightness: dark\r\n'
                          'X-API-TOKEN: \r\n'
-                         'Accept-Encoding: gzip\r\n' deflate\r\n' br\r\n'
+                         'Accept-Encoding: gzip, deflate, br\r\n'
                          'Version: 1.0.1\r\n'
                          'Connection: Keep-Alive\r\n'
                          'Community-Tab-Index: 0\r\n'
                          'Content-Type: application/json\r\n'
                          'Community-Display-Type: list\r\n'
                          'System-Language: zh-CN\r\n'
-                         'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML\r\n' like Gecko) Mobile/15E148 fancast_app\r\n'
+                         'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 fancast_app\r\n'
                          'Device: 2\r\n'
                          'Cookie: header={"Select-Language":"","Community-Tab-Index":"0","Connection":"Keep-Alive","Device":"2","X-API-TOKEN":"","Brightness":"dark","Content-Type":"application/json","Build-Mode":"release","Community-Display-Type":"list","System-Language":"zh-CN","Version":"1.0.1","Accept-Language":"en-CN","Package":"com.contentsmadang.fancast"}\r\n'
                          'Build-Mode: release\r\n'
                          'Package: com.contentsmadang.fancast\r\n'
                          'Accept-Language: en-CN\r\n'
-                         'Accept: text/html\r\n'application/xhtml+xml\r\n'application/xml;q=0.9\r\n'*/*;q=0.8\r\n'
+                         'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n'
                          'Select-Language: \r\n')
 
     def select(self, name: str) -> None:
